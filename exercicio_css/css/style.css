@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center; /* Centraliza o conteúdo de texto */
+}
+
+/* Cabeçalho */
+body > header {
+    background-color: #2f3640;
+    padding: 16px 0;
+    color: #f5f6fa;
+}
+
+/* Container de cabeçalho com alinhamento e espaçamento */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+/* Estilo de navegação e menu */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    margin-left: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+header li a {
+    color: #f5f6fa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header li a:hover {
+    color: #00a8ff;
+}
+
+/* Container de conteúdo principal */
+.container {
+    width: 90%; /* Altere para ocupar 90% da largura */
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 20px 0; /* Adiciona espaçamento no topo e embaixo */
+}
+
+/* Seções de artigos */
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinha os artigos ao centro */
+    gap: 20px; /* Adiciona espaçamento entre os artigos */
+}
+
+.articles article {
+    width: calc(33.33% - 20px); /* Ajuste de largura proporcional */
+    margin-bottom: 20px;
+}
+
+.articles article img {
+    width: 100%;
+    height: auto;
+}
+
+/* Títulos das seções */
+section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+/* Títulos dos artigos */
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+/* Parágrafos e links */
+.articles article p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.articles article a {
+    background-color: blue;
+    color: #fff;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.articles article a:hover {
+    background-color: darkblue;
+    text-decoration: underline;
+}
+
+/* Seção de esportes */
+#sports {
+    background-color: rgba(0, 255, 0, 0.1);
+    padding: 16px 0;
+}
+
+#sports .articles article a {
+    background-color: #009432;
+}
+
+#sports .articles article a:hover {
+    background-color: #007f2e;
+}
+
+/* Seção de economia */
+#economy {
+    background-color: #f8f59f;
+    padding: 16px 0;
+}
+
+#economy .articles article a {
+    background-color: #ff9f1a;
+}
+
+#economy .articles article a:hover {
+    background-color: #e68a00;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .articles article {
+        width: 100%; /* Artigos ocupam toda a largura no mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu em coluna para mobile */
+        align-items: flex-start;
+    }
+
+    header li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Seção de Entretenimento */
+#entertainment {
+    background: linear-gradient(135deg, #808080, #ffd200); /* Gradiente de laranja para dourado */
+    padding: 20px 0;
+    color: #fff; /* Cor de texto branca para contraste */
+    font-family: 'Courier New', Courier, monospace; /* Estilo de fonte diferenciado */
+}
+
+#entertainment h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
+}
+
+#entertainment .articles article {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#entertainment .articles article:hover {
+    transform: scale(1.05); /* Zoom suave no ho
+
+
+#entertainment .articles article a {
+    background-color: #d35400; /* Cor laranja vibrante */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#entertainment .articles article a:hover {
+    background-color: #e67e22;
+    text-decoration: underline;
+}
+
+/* Seção de Tecnologia */
+#technology {
+    background: linear-gradient(135deg, #00c6ff, #00c6ff); /* Gradiente de azul claro para escuro */
+    padding: 20px 0;
+    color: #fff;
+    font-family: 'Lucida Console', Monaco, monospace; /* Estilo de fonte tecnológica */
+}
+
+#technology h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
+}
+
+#technology .articles article {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido com menos opacidade */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#technology .articles article:hover {
+    transform: translateY(-10px); /* Elevação no hover */
+}
+
+#technology .articles article a {
+    background-color: #3498db; /* Azul vibrante para links */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#technology .articles article a:hover {
+    background-color: #2980b9;
+    text-decoration: underline;
+}
